@@ -1,0 +1,141 @@
+.header-container {
+  background-color: navy;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-family: cursive;
+  font-style: italic;
+}
+
+.header-container .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.header-container button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: navy;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: cursive;
+}
+
+.header-container button:hover {
+  background-color: lightgray;
+}
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 80vh; 
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-blocks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+.arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.content-blocks {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  }
+
+.content-blocks::-webkit-scrollbar {
+  display: none;
+}
+
+.block {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 300px; 
+  height: 500px;
+  flex-shrink: 0; 
+  transition: transform 0.3s ease;
+  display: inline-block;
+  opacity: 0.3; 
+  transition: opacity 0.3s ease;
+  text-align: center; 
+  position: relative;
+  font-family: cursive;
+}
+
+.block.active {
+  opacity: 1; 
+  transform: scale(1.15); 
+}
+
+.block-image {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 15px; 
+}
+
+.block h2 {
+  font-size: 24px;
+  color: navy;
+  margin-bottom: 15px;
+}
+
+.block ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.block li {
+  font-size: 16px;
+  color: navy;
+  line-height: 1.5;
+}
